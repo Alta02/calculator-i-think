@@ -1,0 +1,174 @@
+/* ======= ROOT VARIABLE ====== */
+:root {
+  /* White */
+  --color-white-1: #fff;
+  --color-white-2: #eee;
+  --color-white-3: #edf1f4;
+
+  /* Dark */
+  --color-dark-1: #333;
+  --color-dark-2: #555;
+  --color-dark-3: #666;
+  --color-dark-4: #292c2f;
+  --color-dark-5: #33393e;
+
+  /* Unique button */
+  --color-danger: #f44336;
+  --color-success: #31a935;
+  --color-good-1: #2196f3;
+  --color-good-2: #5166d6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "consolas";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--color-white-3);
+}
+
+.dark {
+  background: var(--color-dark-4);
+  transition: all 200ms ease-out;
+}
+
+.container {
+  position: relative;
+  width: 340px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.1), inset -15px -15px 20px #fffbff;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffbff;
+}
+
+.dark .container {
+  background: var(--color-dark-5);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25), -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+
+.container .button {
+  position: relative;
+  display: grid;
+}
+
+.container .button #value {
+  position: relative;
+  grid-column: span 4;
+  user-select: none;
+  overflow: none;
+  width: 100%;
+  text-align: end;
+  color: var(--color-good-2);
+  height: 100px;
+  line-height: 100px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fffbff;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.dark .container .button #value {
+  color: var(--color-white-2);
+  box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.25), inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+
+.container .button span {
+  position: relative;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 20px #fffbff;
+  margin: 10px;
+  cursor: pointer;
+  user-select: none;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: var(--color-dark-3);
+  border: 2px solid var(--color-white-3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fffbff;
+  border-radius: 10px;
+}
+
+.dark .container .button span {
+  color: var(--color-white-2);
+  border: 2px solid var(--color-dark-1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.container .button span:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fffbff;
+  color: var(--color-danger);
+}
+
+.dark .container .button span:active {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.container .button span#clear {
+  grid-column: span 2;
+  background: var(--color-danger);
+  color: var(--color-white-1);
+  border: 2px solid var(--color-white-3);
+}
+
+.container .button span#plus {
+  grid-row: span 2;
+  background: var(--color-success);
+  color: var(--color-white-1);
+  border: 2px solid var(--color-white-3);
+}
+
+.container .button span#equal {
+  grid-row: span 2;
+  background: var(--color-good-1);
+  color: var(--color-white-1);
+  border: 2px solid var(--color-white-3);
+}
+
+.dark .container .button span#clear,
+.dark .container .button span#plus,
+.dark .container .button span#equal {
+  border: 2px solid var(--color-dark-1);
+}
+
+.container .button span#clear:active,
+.container .button span#plus:active,
+.container .button span#equal:active {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff, inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark .container .button span#clear:active,
+.dark .container .button span#plus:active,
+.dark .container .button span#equal:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: var(--color-dark-2);
+  cursor: pointer;
+  border: 2px solid var(--color-white-3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  transition: all 200ms ease;
+}
+
+.dark .toggle-btn {
+  background: var(--color-white-3);
+  border: 2px solid var(--color-dark-1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(0, 0, 0, 0.25);
+}
