@@ -34,11 +34,6 @@ body {
   background: var(--color-white-3);
 }
 
-.dark {
-  background: var(--color-dark-4);
-  transition: all 200ms ease-out;
-}
-
 .container {
   position: relative;
   width: 340px;
@@ -46,11 +41,6 @@ body {
   border-radius: 20px;
   box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.1), inset -15px -15px 20px #fffbff;
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffbff;
-}
-
-.dark .container {
-  background: var(--color-dark-5);
-  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25), -15px -15px 20px rgba(255, 255, 255, 0.1);
 }
 
 .container .button {
@@ -76,11 +66,6 @@ body {
   font-weight: 500;
 }
 
-.dark .container .button #value {
-  color: var(--color-white-2);
-  box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.25), inset -15px -15px 20px rgba(255, 255, 255, 0.1);
-}
-
 .container .button span {
   position: relative;
   padding: 10px;
@@ -99,19 +84,9 @@ body {
   border-radius: 10px;
 }
 
-.dark .container .button span {
-  color: var(--color-white-2);
-  border: 2px solid var(--color-dark-1);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.1);
-}
-
 .container .button span:active {
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fffbff;
   color: var(--color-danger);
-}
-
-.dark .container .button span:active {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
 
 .container .button span#clear {
@@ -135,22 +110,10 @@ body {
   border: 2px solid var(--color-white-3);
 }
 
-.dark .container .button span#clear,
-.dark .container .button span#plus,
-.dark .container .button span#equal {
-  border: 2px solid var(--color-dark-1);
-}
-
 .container .button span#clear:active,
 .container .button span#plus:active,
 .container .button span#equal:active {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff, inset -5px -5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dark .container .button span#clear:active,
-.dark .container .button span#plus:active,
-.dark .container .button span#equal:active {
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .toggle-btn {
@@ -165,6 +128,45 @@ body {
   border: 2px solid var(--color-white-3);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
   transition: all 200ms ease;
+}
+
+/*========== Dark Mode ==========*/
+
+.dark {
+  background: var(--color-dark-4);
+  transition: all 200ms ease-out;
+}
+
+.dark .container {
+  background: var(--color-dark-5);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25), -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .container .button #value {
+  color: var(--color-white-2);
+  box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.25), inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .container .button span {
+  color: var(--color-white-2);
+  border: 2px solid var(--color-dark-1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark .container .button span:active {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark .container .button span#clear,
+.dark .container .button span#plus,
+.dark .container .button span#equal {
+  border: 2px solid var(--color-dark-1);
+}
+
+.dark .container .button span#clear:active,
+.dark .container .button span#plus:active,
+.dark .container .button span#equal:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dark .toggle-btn {
